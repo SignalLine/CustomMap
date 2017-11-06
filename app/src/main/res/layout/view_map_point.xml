@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/map_point_relative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/map_point_linear"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <!--指定ImageView的宽度，可以在生成效果的时候，下面文字有指定的宽度，点之间连线才能显示在中间点的位置-->
+
+        <ImageView
+            android:id="@+id/pointIcon"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/point_icon"/>
+
+        <TextView
+            android:id="@+id/pointName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/color_tab_bg"
+            android:text="@string/pointName"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pointTag"
+        android:text="@string/pointTag"
+        android:textColor="@color/color_tab_bg"
+        android:layout_alignTop="@id/map_point_linear"
+        android:layout_alignRight="@id/map_point_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>
